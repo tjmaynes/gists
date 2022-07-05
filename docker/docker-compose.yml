@@ -1,0 +1,118 @@
+version: '3'
+
+services:
+  recipe-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE_NAME: recipe-service
+    restart: always
+    networks:
+      - rizeppi-network
+    ports:
+      - "${RECIPE_SERVICE_PORT}:${RECIPE_SERVICE_PORT}"
+    depends_on:
+      - rizeppi-db
+      - discovery-service
+      - config-service
+    links:
+      - rizeppi-db
+      - discovery-service
+      - config-server
+    env_file:
+      - .env.development
+    environment:
+      JAVA_OPTS: |
+        -Dspring.profiles.active=development
+
+  gateway-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE_NAME: gateway-service
+    restart: always
+    networks:
+      - rizeppi-network
+    ports:
+      - "${GATEWAY_SERVICE_PORT}:${GATEWAY_SERVICE_PORT}"
+    depends_on:
+      - rizeppi-db
+      - discovery-service
+      - config-service
+    links:
+      - rizeppi-db
+      - discovery-service
+      - config-server
+    env_file:
+      - .env.development
+    environment:
+      JAVA_OPTS: |
+        -Dspring.profiles.active=development
+
+  discovery-service:
+    image: "springcloud/eureka"
+    restart: always
+    networks:
+      - rizeppi-network
+    ports:
+      - "${DISCOVERY_SERVICE_PORT}:${DISCOVERY_SERVICE_PORT}"
+    env_file:
+      - .env.development
+    environment:
+      JAVA_OPTS: |
+        -Dserver.port=${DISCOVERY_SERVICE_PORT}
+        -Dspring.application.name=discovery-service
+        -Deureka.client.registerWithEureka=false
+        -Deureka.client.fetchRegistry=false
+        -Deureka.client.service-url.defaultZone=${DISCOVERY_SERVICE_URI}
+
+  config-service:
+    image: "hyness/spring-cloud-config-server"
+    networks:
+      - rizeppi-network
+    ports:
+      - "${CONFIG_SERVICE_PORT}:${CONFIG_SERVICE_PORT}"
+    env_file:
+      - .env.development
+    environment:
+      JAVA_OPTS: |
+        -Dserver.port=${CONFIG_SERVICE_PORT}
+        -Dspring.application.name=config-service
+        -Dspring.cloud.config.server.git.uri=${CONFIG_SERVICE_CONFIG_URI}
+        -Dspring.cloud.config.server.git.default-label=main
+
+#  tracing-service:
+#    image: "openzipkin/zipkin"
+#    restart: always
+#    volumes:
+#      - rizeppi-volume:/var/lib/postgresql/data/
+#    networks:
+#      - rizeppi-network
+#    ports:
+#      - "${TRACING_SERVICE_PORT}:${TRACING_SERVICE_PORT}"
+#    depends_on:
+#      - rizeppi-db
+#      - discovery-service
+#      - config-service
+#    env_file:
+#      - .env.development
+
+  rizeppi-db:
+    image: "postgres:9.5.14-alpine"
+    restart: always
+    volumes:
+      - rizeppi-volume:/var/lib/postgresql/data/
+    networks:
+      - rizeppi-network
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    env_file:
+      - .env.development
+
+volumes:
+  rizeppi-volume:
+
+networks:
+  rizeppi-network:

@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  app:
+    image: plexinc/pms-docker:1.27.1.5916-6b0e31a64
+    container_name: plex-server
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - PUID=${PLEX_UID}
+      - PGID=${PLEX_GID}
+      - TZ=${PLEX_TIMEZONE}
+      - CLAIM_TOKEN=${PLEX_CLAIM_TOKEN}
+    volumes:
+      - ${PLEX_BASE_DIRECTORY}/config:/config
+      - ${PLEX_BASE_DIRECTORY}/transcode:/transcode
+      - ${PLEX_BASE_DIRECTORY}/media:/media
