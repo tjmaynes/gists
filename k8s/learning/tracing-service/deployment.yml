@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tracing-service
+spec:
+  selector:
+    matchLabels:
+      app: tracing-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: tracing-service
+    spec:
+      containers:
+        - name: tracing-service
+          image: openzipkin/zipkin
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 9411

@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-service
+spec:
+  selector:
+    matchLabels:
+      app: gateway-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: gateway-service
+    spec:
+      containers:
+        - name: gateway-service
+          image: tjmaynes/gateway-service
+          imagePullPolicy: "Never"
+          ports:
+            - containerPort: 8080
+          env:
+            - name: CONFIG_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: CONFIG_SERVICE_URI
+            - name: DISCOVERY_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: DISCOVERY_SERVICE_URI
+            - name: TRACING_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: TRACING_SERVICE_URI
+            - name: SERVER_PORT
+              value: "8080"
+            - name: _JAVA_OPTS
+              value: -Dspring.zipkin.base-url=${TRACING_SERVICE_URI}
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 15

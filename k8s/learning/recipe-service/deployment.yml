@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recipe-service
+spec:
+  selector:
+    matchLabels:
+      app: recipe-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: recipe-service
+    spec:
+      containers:
+        - name: recipe-service
+          image: tjmaynes/recipe-service
+          imagePullPolicy: "Never"
+          ports:
+            - containerPort: 5000
+          env:
+            - name: CONFIG_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: CONFIG_SERVICE_URI
+            - name: DISCOVERY_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: DISCOVERY_SERVICE_URI
+            - name: TRACING_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: TRACING_SERVICE_URI
+            - name: RECIPE_DB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: recipe-secrets
+                  key: RECIPE_DB_URL
+            - name: SERVER_PORT
+              value: "5000"
+            - name: _JAVA_OPTS
+              value: -Dspring.zipkin.base-url=${TRACING_SERVICE_URI}
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 5000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 5000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 15

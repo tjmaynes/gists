@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-service-config-map
+data:
+  application.properties: |
+    server.port=8888
+    spring.application.name=config-service
+    spring.cloud.config.server.git.uri=https://github.com/tjmaynes/rizeppi-config.git
+    spring.cloud.config.server.git.default-label=main
+    spring.zipkin.base-url=${TRACING_SERVICE_URI}

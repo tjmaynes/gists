@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recipe-db
+spec:
+  selector:
+    matchLabels:
+      app: recipe-db
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: recipe-db
+    spec:
+      containers:
+        - name: recipe-db
+          image: postgres:9.5.14-alpine
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: recipe-secrets
+                  key: RECIPE_DB_NAME
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: recipe-secrets
+                  key: RECIPE_DB_USERNAME
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: recipe-secrets
+                  key: RECIPE_DB_PASSWORD
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: recipe-db
+      volumes:
+        - name: recipe-db
+          persistentVolumeClaim:
+            claimName: recipe-db-pv-claim

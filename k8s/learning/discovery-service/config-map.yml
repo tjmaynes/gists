@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: discovery-config-map
+data:
+  application.properties: |
+    server.port=8761
+    spring.application.name=discovery-service
+    eureka.instance.hostname=${HOSTNAME}.discovery-service
+    eureka.client.registerWithEureka=true
+    eureka.client.fetchRegistry=true
+    eureka.client.serviceUrl.default-zone=${DISCOVERY_SERVICE_URI}
+    spring.zipkin.base-url=${TRACING_SERVICE_URI}

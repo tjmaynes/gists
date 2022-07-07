@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: discovery-service
+spec:
+  serviceName: discovery-service
+  replicas: 3
+  podManagementPolicy: "Parallel"
+  selector:
+    matchLabels:
+      app: discovery-service
+  template:
+    metadata:
+      labels:
+        app: discovery-service
+    spec:
+      containers:
+        - name: discovery-service
+          image: tjmaynes/discovery-service
+          imagePullPolicy: "Never"
+          ports:
+            - containerPort: 8761
+          env:
+            - name: HOSTNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: DISCOVERY_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: DISCOVERY_SERVICE_URI
+            - name: TRACING_SERVICE_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config-map
+                  key: TRACING_SERVICE_URI
+            - name: SPRING_CONFIG_LOCATION
+              value: "file:///deployments/config/application.properties"
+          volumeMounts:
+            - name: discovery-config
+              mountPath: "/deployments/config"
+              readOnly: true
+      volumes:
+        - name: discovery-config
+          configMap:
+            name: discovery-config-map
+            items:
+              - key: application.properties
+                path: application.properties

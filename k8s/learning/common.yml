@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-config-map
+data:
+  CONFIG_SERVICE_URI: "http://config-service.development.svc.cluster.local:8888"
+  DISCOVERY_SERVICE_URI: "http://discovery-service-0.development.svc.cluster.local:8761/eureka,http://discovery-service-1.development.svc.cluster.local:8761/eureka,http://discovery-service-2.development.svc.cluster.local:8761/eureka"
+  TRACING_SERVICE_URI: "http://tracing-service.development.svc.cluster.local:9411"
+#  CONFIG_SERVICE_URI: "http://localhost:8888"
+#  DISCOVERY_SERVICE_URI: "http://localhost:8761/eureka"
+#  TRACING_SERVICE_URI: "http://localhost:9411"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: recipe-secrets
+type: Opaque
+stringData:
+  RECIPE_DB_NAME: rizeppi
+  RECIPE_DB_USERNAME: postgres
+  RECIPE_DB_PASSWORD: password
+  RECIPE_DB_URL: "r2dbc:postgresql://postgres:password@recipe-db.development.svc.cluster.local:5432/rizeppi?sslmode=disable"
