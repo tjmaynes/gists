@@ -1,0 +1,9 @@
+[package]
+name = "leetcode-rust"
+version = "0.1.0"
+authors = [
+    "TJ Maynes <tj@tjmaynes.com>"
+]
+edition = "2018"
+
+[dependencies]
