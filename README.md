@@ -1,2 +1,2 @@
 # gists
-> A place to dump all my temp files and things I may want to remember
+> An archive of old projects, temp files, learnings that I don't want to forget
