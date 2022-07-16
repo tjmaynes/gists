@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Delicate",
+    "artist": "Taylor Swift",
+    "genre": "Top 40"
+  },
+  {
+    "title": "Castle on the Hill",
+    "artist": "Ed Sheeran",
+    "genre": "Top 40"
+  },
+  {
+    "title": "Friday I'm in Love",
+    "artist": "The Cure",
+    "genre": "90s"
+  },
+  {
+    "title": "New Rules",
+    "artist": "Dua Lipa",
+    "genre": "Top 40"
+  },
+  {
+    "title": "Everything She Wants",
+    "artist": "Wham!",
+    "genre": "80s"
+  },
+  {
+    "title": "Radioactive",
+    "artist": "Maroon 5",
+    "genre": "Top 40"
+  }
+]

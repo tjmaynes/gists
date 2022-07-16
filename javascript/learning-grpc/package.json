@@ -1,0 +1,25 @@
+{
+  "name": "learning-grpc",
+  "version": "0.1.0",
+  "description": "Learning how gRPC works by setting up a simple Todo service with list, add, and remove functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require ./test_helper.js $(find src -name '*.spec.js')",
+    "test:watch": "npm run test -- --watch",
+    "start": "node index.js"
+  },
+  "author": "TJ Maynes <tjmaynes@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.4.0",
+    "grpc": "^1.18.0",
+    "mongodb": "^3.1.13"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "grpc-promise": "^1.4.0",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.3",
+    "sinon-chai": "^3.3.0"
+  }
+}

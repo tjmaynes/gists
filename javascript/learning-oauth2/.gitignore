@@ -1,0 +1,23 @@
+# Mac OS
+.DS_Store
+
+# Node
+node_modules/
+
+# Webpack
+dist/
+
+# Logs
+*.log
+
+# Editor
+.idea/
+.vscode/
+
+# Test Coverage
+.nyc_output/
+coverage/
+
+# Project
+db/
+dist/

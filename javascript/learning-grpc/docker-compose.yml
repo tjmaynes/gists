@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  todo-grpc-service:
+    build: ./
+    container_name: todo-grpc-service
+    environment:
+      - TODO_SERVER_PORT=50051
+      - TODO_SOURCE_HOST=mongodb://todo-mongodb:27017
+    volumes:
+      - todoservice_data:/usr/local/share/docker/todoservice/data
+    ports:
+      - 50051:50051
+    networks:
+      - todoservice_network
+    links:
+      - mongodb
+
+  todo-mongodb:
+    image: mongo:4.0.6
+    container_name: todo-mongodb
+    ports:
+      - 27017:27017
+    networks:
+      - todoservice_network
+    volumes:
+      - todoservice_data:/usr/local/share/docker/todoservice/data
+
+volumes:
+  todoservice_data:
+    driver: local
+
+networks:
+  todoservice_network:
+    driver: bridge

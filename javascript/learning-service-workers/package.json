@@ -1,0 +1,31 @@
+{
+  "name": "learning-service-workers",
+  "version": "0.1.0",
+  "description": "Learning service workers by example.",
+  "main": "server/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --mode production",
+    "start_dev_build": "./node_modules/.bin/webpack-dev-server --mode development",
+    "start_server": "PORT=3000 DATASOURCE_LOCATION=./server/playlists.json node server/index.js",
+    "start": "npm run build && npm run start_server"
+  },
+  "keywords": [
+    "service",
+    "workers",
+    "tutorial"
+  ],
+  "author": "TJ Maynes <tjmaynes@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.6.0",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": ">=3.1.11"
+  }
+}
