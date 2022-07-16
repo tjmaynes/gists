@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  my-service-db:
+    image: "postgres:11.5-alpine"
+    restart: always
+    volumes:
+      - my-service-volume:/var/lib/postgresql/data/
+      - ./db:/docker-entrypoint-initdb.d/
+    networks:
+      - my-service-network 
+    ports:
+      - "5432:5432"
+    environment:
+        POSTGRES_HOST: localhost
+        POSTGRES_DB: my-service
+        POSTGRES_USER: root
+        POSTGRES_PASSWORD: postgres
+
+volumes:
+  my-service-volume:
+
+networks:
+  my-service-network:
