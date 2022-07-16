@@ -1,0 +1,44 @@
+#+TITLE: Blog
+#+AUTHOR: TJ Maynes <tj@tjmaynes.com>
+
+#+BEGIN_QUOTE
+Personal blog.
+#+END_QUOTE
+
+** Requirements
+- [[https://www.gnu.org/s/emacs/][Emacs]]
+- [[https://www.docker.com/products/docker-desktop][Docker]]
+
+** Usage
+To build the blog, run the following command:
+#+begin_src bash
+make build_blog
+#+end_src
+
+To publish the blog, run the following command:
+#+begin_src bash
+make publish_blog
+#+end_src
+
+To preview the blog using =nginx= in a =docker= container, run the following command:
+#+begin_src bash
+make preview_blog
+#+end_src
+
+To build the =docker= image, run the following command:
+#+begin_src bash
+TAG=<some-build-tag> \
+make build_image
+#+end_src
+
+To debug the =docker= image, run the following command:
+#+begin_src bash
+make debug_image
+#+end_src
+
+To push the =docker= image to dockerhub, run the following command:
+#+begin_src bash
+REGISTRY_PASSWORD=<some-registry-password> \
+TAG=<some-build-tag> \
+make push_image
+#+end_src

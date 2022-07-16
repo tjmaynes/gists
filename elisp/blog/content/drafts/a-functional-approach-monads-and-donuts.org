@@ -1,0 +1,49 @@
+#+TITLE: A Functional Approach: Monads n' Donuts
+#+DATE: <2019-10-29 Tue>
+#+DESCRIPTION: This blog post will be discussing an analogy I use to depict what a monad is.
+
+[[file:./images/monads-and-donuts-1.jpg]]
+
+In this blog post, we'll discuss an approach I use to introduce [[https://en.wikipedia.org/wiki/Monad_(functional_programming)][monads]] to newcomers that will include code snippets in [[https://kotlinlang.org][Kotlin]]. *Please feel free to ask questions or state your concerns in the comments section.*
+
+** Background
+
+I've been using the Either and Option monads on various projects for about two and a half years now. While I've enjoyed the safety and control these monads give me when writing software, I've found that I've had a hard time introducing monads to newcomers. Specifically, while I've used them been unable to explain what monads are and have avoid saying the word "monad".
+However I've found that avoiding the "monad" concept is disingenuous and I don't think it's a good long term strategy for convincing team members of it's power. After doing some research (i.e. browsing around the internet and talking to peers) I think I've come up with a decent introduction 
+I enjoy utilizing these monads as a way of handle errors from external systems. However, when it comes time to introduce to explain monads s a monad a monad. However, after doing some research I found an analogy that encapsulates what I believe to be the spirit of what makes a monad a monad.
+
+I've been using the Either and Option monads on various projects (in different runtimes) over the last couple of years. I like utilizing these monads as a way of handle errors from external systems. However, when it comes time to introducing someone new to these monads, I'm unable to describe what makes a monad a /monad/. However, after doing some research I found an analogy that encapsulates what I believe to be the spirit of what makes a monad a /monad/.
+
+#+begin_quote
+A monad is an abstract data type that allows programmers to chain complex, nondeterministic operations.
+#+end_quote
+
+An abstract data type (ADT) is a kind of data type defined by it's behavior from the point of view from a user. Since an ADT is created from the user's point of view, it's internal presentation is hidden, thus enabling us to focus more on behavior than caring what data is being held (it could be a String, Integer, YourCustomObject, etc).
+
+The ability to chain operations is the /functor/ attribute of monads. In category theory, a /functor/ is a something has enables /mappable/ behavior, such as iterating over a list of objects/strings/etc. To enable the chaining of /nondeterministic/ operations, two functions are found on monadic types: *return* and *bind*.
+
+The *return* function /places/ a value into a monadic context, whereas the *bind* function /applies/ a function in a monadic context.
+
+#+begin_quote
+Note: Depending on the programming language or library that you are using, the *return* function will typically be represented through the /constructor/ method and *bind* may have a different name such as /flatMap/ or /map/.
+#+end_quote
+
+Let's write an example of monads in action using [[https://kotlinlang.org/][Kotlin]] and a functional programming library called [[https://arrow-kt.io/docs/apidocs/arrow-core-data/arrow.core/-option/][Arrow]]. A quick real-world example is when I'm trying to eat a donut from my favorite donut place in the Upper West Side, [[https://www.dailyprovisionsnyc.com/menus/][Daily Provisions]]. Let's write a function that encapsulates the operation of getting a donut from Daily Provisions and, for simplicity, we'll choose the Option monad as its return type.
+
+#+begin_src kotlin
+fun getDonut(time: Date): Option<Donut> =
+  if (donutsAreAvailable(time)) {
+    Some(Donut())
+  } else {
+    None
+  }
+#+end_src
+
+The above function could return either my donut or nothing depending on some external factor (time). When we pass a value into the Some function, we are effectively using the /return/ trait of a monadic type. The None function is a type of Option that returns...nothing! Next, do something with...something.
+
+#+begin_src kotlin
+val eatADonut = getDonut(timeBefore11am)
+  .map { donut -> donut.eat() }
+#+end_src
+
+The above variable gets a donut and if a donut is found it will /map/, or /bind/, to a function that eats the donut. If the /getDonut/ returns a None, because I overslept and missed the opportunity to get a donut, then our /map/ method will never get called.

@@ -1,0 +1,16 @@
+# MacOS Stuff
+.DS_Store
+
+# Org-Publish
+.timestamps/
+_site/
+
+# Auto-Generated
+build/
+content/posts/index.*
+content/posts/rss.*
+
+# CI stuff
+emacs-*
+tmp/
+node_modules/
