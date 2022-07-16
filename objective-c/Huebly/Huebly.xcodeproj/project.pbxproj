@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08373BCF1D96F4F00026B8AD /* TMAddColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08373BCE1D96F4F00026B8AD /* TMAddColorView.m */; };
+		08373BD31D96F88D0026B8AD /* TMAddColorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08373BD21D96F88D0026B8AD /* TMAddColorViewModel.m */; };
+		08373BD61D9709510026B8AD /* TMDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08373BD51D9709510026B8AD /* TMDetailViewController.swift */; };
+		08373BD81D970A0F0026B8AD /* TMDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08373BD71D970A0F0026B8AD /* TMDetailView.swift */; };
+		08373BDD1D970CD10026B8AD /* TMQueryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08373BDC1D970CD10026B8AD /* TMQueryOperation.swift */; };
+		0847EE121CFA35C20068BD4F /* TMRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0847EE111CFA35C20068BD4F /* TMRootView.m */; };
+		0848DBC21D972EFD00B09187 /* NSOperationQueue+DataOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0848DBC11D972EFD00B09187 /* NSOperationQueue+DataOperationQueue.m */; };
+		0848DBC61D97345200B09187 /* TMDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0848DBC51D97345200B09187 /* TMDataOperation.m */; };
+		0848DBC81D97439D00B09187 /* TMDeleteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848DBC71D97439D00B09187 /* TMDeleteOperation.swift */; };
+		085C43F31D935CA30029C2D7 /* TMStoreOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 085C43F21D935CA30029C2D7 /* TMStoreOperation.m */; };
+		0893F48D1CC289A900FB8E02 /* TMPersistenceStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0893F48C1CC289A900FB8E02 /* TMPersistenceStack.m */; };
+		0893F4901CC28AD600FB8E02 /* TMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0893F48F1CC28AD600FB8E02 /* TMDataManager.m */; };
+		0893F4941CC28BA300FB8E02 /* TMDependencyInjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0893F4931CC28BA300FB8E02 /* TMDependencyInjection.m */; };
+		0893F4971CC28F5600FB8E02 /* TMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0893F4961CC28F5600FB8E02 /* TMRootViewController.m */; };
+		08A856831CB7A7610042D51D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A8567F1CB7A7610042D51D /* Images.xcassets */; };
+		08A856851CB7A7610042D51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A856811CB7A7610042D51D /* main.m */; };
+		08A856891CB7A7F10042D51D /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A856881CB7A7F10042D51D /* Color.m */; };
+		08A8568C1CB7A8190042D51D /* Huebly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08A8568A1CB7A8190042D51D /* Huebly.xcdatamodeld */; };
+		08DBD3131D93534400BF046C /* TMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DBD3121D93534400BF046C /* TMOperation.m */; };
+		08DFB32E1D99F81000AA9F9B /* ColorModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DFB32D1D99F81000AA9F9B /* ColorModelTestCase.swift */; };
+		08DFB3301D99FC0F00AA9F9B /* DataManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DFB32F1D99FC0F00AA9F9B /* DataManagerTestCase.swift */; };
+		08EBF1F91CFA0D2F0080B527 /* TMAddColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EBF1F81CFA0D2F0080B527 /* TMAddColorViewController.m */; };
+		08EBF21E1CFA223C0080B527 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EBF21D1CFA223C0080B527 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		087D89BC1A46493A00EC2DE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 087D89971A46493900EC2DE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 087D899E1A46493900EC2DE9;
+			remoteInfo = Huebly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		080540141D9E045700874D92 /* Huebly-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Huebly-Bridging-Header.h"; sourceTree = "<group>"; };
+		08373BCD1D96F4F00026B8AD /* TMAddColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAddColorView.h; sourceTree = "<group>"; };
+		08373BCE1D96F4F00026B8AD /* TMAddColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAddColorView.m; sourceTree = "<group>"; };
+		08373BD11D96F88D0026B8AD /* TMAddColorViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAddColorViewModel.h; path = ViewModels/TMAddColorViewModel.h; sourceTree = "<group>"; };
+		08373BD21D96F88D0026B8AD /* TMAddColorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAddColorViewModel.m; path = ViewModels/TMAddColorViewModel.m; sourceTree = "<group>"; };
+		08373BD51D9709510026B8AD /* TMDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDetailViewController.swift; sourceTree = "<group>"; };
+		08373BD71D970A0F0026B8AD /* TMDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDetailView.swift; sourceTree = "<group>"; };
+		08373BDC1D970CD10026B8AD /* TMQueryOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMQueryOperation.swift; path = Operations/TMQueryOperation.swift; sourceTree = "<group>"; };
+		0847EE101CFA35C20068BD4F /* TMRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRootView.h; sourceTree = "<group>"; };
+		0847EE111CFA35C20068BD4F /* TMRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRootView.m; sourceTree = "<group>"; };
+		0848DBC01D972EFD00B09187 /* NSOperationQueue+DataOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSOperationQueue+DataOperationQueue.h"; path = "Operations/NSOperationQueue+DataOperationQueue.h"; sourceTree = "<group>"; };
+		0848DBC11D972EFD00B09187 /* NSOperationQueue+DataOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSOperationQueue+DataOperationQueue.m"; path = "Operations/NSOperationQueue+DataOperationQueue.m"; sourceTree = "<group>"; };
+		0848DBC41D97345200B09187 /* TMDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMDataOperation.h; path = Operations/TMDataOperation.h; sourceTree = "<group>"; };
+		0848DBC51D97345200B09187 /* TMDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMDataOperation.m; path = Operations/TMDataOperation.m; sourceTree = "<group>"; };
+		0848DBC71D97439D00B09187 /* TMDeleteOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDeleteOperation.swift; path = Operations/TMDeleteOperation.swift; sourceTree = "<group>"; };
+		085C43F11D935CA30029C2D7 /* TMStoreOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMStoreOperation.h; path = Operations/TMStoreOperation.h; sourceTree = "<group>"; };
+		085C43F21D935CA30029C2D7 /* TMStoreOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMStoreOperation.m; path = Operations/TMStoreOperation.m; sourceTree = "<group>"; };
+		087D899F1A46493900EC2DE9 /* Huebly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huebly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		087D89BB1A46493A00EC2DE9 /* HueblyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueblyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		087D89C01A46493A00EC2DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0893F48B1CC289A900FB8E02 /* TMPersistenceStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPersistenceStack.h; sourceTree = "<group>"; };
+		0893F48C1CC289A900FB8E02 /* TMPersistenceStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPersistenceStack.m; sourceTree = "<group>"; };
+		0893F48E1CC28AD600FB8E02 /* TMDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataManager.h; sourceTree = "<group>"; };
+		0893F48F1CC28AD600FB8E02 /* TMDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataManager.m; sourceTree = "<group>"; };
+		0893F4921CC28BA300FB8E02 /* TMDependencyInjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMDependencyInjection.h; path = Assembly/TMDependencyInjection.h; sourceTree = "<group>"; };
+		0893F4931CC28BA300FB8E02 /* TMDependencyInjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMDependencyInjection.m; path = Assembly/TMDependencyInjection.m; sourceTree = "<group>"; };
+		0893F4951CC28F5600FB8E02 /* TMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRootViewController.h; sourceTree = "<group>"; };
+		0893F4961CC28F5600FB8E02 /* TMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRootViewController.m; sourceTree = "<group>"; };
+		08A8567F1CB7A7610042D51D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		08A856801CB7A7610042D51D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A856811CB7A7610042D51D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		08A856871CB7A7F10042D51D /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		08A856881CB7A7F10042D51D /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		08A8568B1CB7A8190042D51D /* Huebly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Huebly.xcdatamodel; sourceTree = "<group>"; };
+		08DBD3111D93534400BF046C /* TMOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMOperation.h; path = Operations/TMOperation.h; sourceTree = "<group>"; };
+		08DBD3121D93534400BF046C /* TMOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMOperation.m; path = Operations/TMOperation.m; sourceTree = "<group>"; };
+		08DFB32D1D99F81000AA9F9B /* ColorModelTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModelTestCase.swift; sourceTree = "<group>"; };
+		08DFB32F1D99FC0F00AA9F9B /* DataManagerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagerTestCase.swift; sourceTree = "<group>"; };
+		08EBF1F71CFA0D2F0080B527 /* TMAddColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAddColorViewController.h; sourceTree = "<group>"; };
+		08EBF1F81CFA0D2F0080B527 /* TMAddColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAddColorViewController.m; sourceTree = "<group>"; };
+		08EBF21C1CFA223C0080B527 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Assembly/AppDelegate.h; sourceTree = "<group>"; };
+		08EBF21D1CFA223C0080B527 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Assembly/AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		087D899C1A46493900EC2DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		087D89B81A46493A00EC2DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08373BD01D96F8750026B8AD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				08373BD11D96F88D0026B8AD /* TMAddColorViewModel.h */,
+				08373BD21D96F88D0026B8AD /* TMAddColorViewModel.m */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		087D89961A46493900EC2DE9 = {
+			isa = PBXGroup;
+			children = (
+				087D89A11A46493900EC2DE9 /* Huebly */,
+				080540141D9E045700874D92 /* Huebly-Bridging-Header.h */,
+				087D89BE1A46493A00EC2DE9 /* HueblyTests */,
+				087D89A01A46493900EC2DE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		087D89A01A46493900EC2DE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				087D899F1A46493900EC2DE9 /* Huebly.app */,
+				087D89BB1A46493A00EC2DE9 /* HueblyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		087D89A11A46493900EC2DE9 /* Huebly */ = {
+			isa = PBXGroup;
+			children = (
+				0893F4911CC28B7100FB8E02 /* Assembly */,
+				08DBD3101D9350D200BF046C /* Operations */,
+				08A8567E1CB7A7610042D51D /* Resources */,
+				08A856691CB7A7470042D51D /* Storage */,
+				08A8566A1CB7A7470042D51D /* UI */,
+			);
+			path = Huebly;
+			sourceTree = "<group>";
+		};
+		087D89BE1A46493A00EC2DE9 /* HueblyTests */ = {
+			isa = PBXGroup;
+			children = (
+				087D89BF1A46493A00EC2DE9 /* Supporting Files */,
+				08DFB32D1D99F81000AA9F9B /* ColorModelTestCase.swift */,
+				08DFB32F1D99FC0F00AA9F9B /* DataManagerTestCase.swift */,
+			);
+			path = HueblyTests;
+			sourceTree = "<group>";
+		};
+		087D89BF1A46493A00EC2DE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				087D89C01A46493A00EC2DE9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0893F4911CC28B7100FB8E02 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				08EBF21C1CFA223C0080B527 /* AppDelegate.h */,
+				08EBF21D1CFA223C0080B527 /* AppDelegate.m */,
+				0893F4921CC28BA300FB8E02 /* TMDependencyInjection.h */,
+				0893F4931CC28BA300FB8E02 /* TMDependencyInjection.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		08A856691CB7A7470042D51D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				08A856871CB7A7F10042D51D /* Color.h */,
+				08A856881CB7A7F10042D51D /* Color.m */,
+				08A8568A1CB7A8190042D51D /* Huebly.xcdatamodeld */,
+				0893F48E1CC28AD600FB8E02 /* TMDataManager.h */,
+				0893F48F1CC28AD600FB8E02 /* TMDataManager.m */,
+				0893F48B1CC289A900FB8E02 /* TMPersistenceStack.h */,
+				0893F48C1CC289A900FB8E02 /* TMPersistenceStack.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		08A8566A1CB7A7470042D51D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				08373BD01D96F8750026B8AD /* ViewModels */,
+				08A8566B1CB7A7470042D51D /* Controllers */,
+				08A856741CB7A7470042D51D /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		08A8566B1CB7A7470042D51D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08EBF1F71CFA0D2F0080B527 /* TMAddColorViewController.h */,
+				08EBF1F81CFA0D2F0080B527 /* TMAddColorViewController.m */,
+				08373BD51D9709510026B8AD /* TMDetailViewController.swift */,
+				0893F4951CC28F5600FB8E02 /* TMRootViewController.h */,
+				0893F4961CC28F5600FB8E02 /* TMRootViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		08A856741CB7A7470042D51D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0847EE101CFA35C20068BD4F /* TMRootView.h */,
+				0847EE111CFA35C20068BD4F /* TMRootView.m */,
+				08373BCD1D96F4F00026B8AD /* TMAddColorView.h */,
+				08373BCE1D96F4F00026B8AD /* TMAddColorView.m */,
+				08373BD71D970A0F0026B8AD /* TMDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		08A8567E1CB7A7610042D51D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08A8567F1CB7A7610042D51D /* Images.xcassets */,
+				08A856801CB7A7610042D51D /* Info.plist */,
+				08A856811CB7A7610042D51D /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		08DBD3101D9350D200BF046C /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				0848DBC01D972EFD00B09187 /* NSOperationQueue+DataOperationQueue.h */,
+				0848DBC11D972EFD00B09187 /* NSOperationQueue+DataOperationQueue.m */,
+				08DBD3111D93534400BF046C /* TMOperation.h */,
+				08DBD3121D93534400BF046C /* TMOperation.m */,
+				08373BDC1D970CD10026B8AD /* TMQueryOperation.swift */,
+				085C43F11D935CA30029C2D7 /* TMStoreOperation.h */,
+				085C43F21D935CA30029C2D7 /* TMStoreOperation.m */,
+				0848DBC41D97345200B09187 /* TMDataOperation.h */,
+				0848DBC51D97345200B09187 /* TMDataOperation.m */,
+				0848DBC71D97439D00B09187 /* TMDeleteOperation.swift */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		087D899E1A46493900EC2DE9 /* Huebly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 087D89C51A46493A00EC2DE9 /* Build configuration list for PBXNativeTarget "Huebly" */;
+			buildPhases = (
+				087D899B1A46493900EC2DE9 /* Sources */,
+				087D899C1A46493900EC2DE9 /* Frameworks */,
+				087D899D1A46493900EC2DE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Huebly;
+			productName = Huebly;
+			productReference = 087D899F1A46493900EC2DE9 /* Huebly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		087D89BA1A46493A00EC2DE9 /* HueblyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 087D89C81A46493A00EC2DE9 /* Build configuration list for PBXNativeTarget "HueblyTests" */;
+			buildPhases = (
+				087D89B71A46493A00EC2DE9 /* Sources */,
+				087D89B81A46493A00EC2DE9 /* Frameworks */,
+				087D89B91A46493A00EC2DE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				087D89BD1A46493A00EC2DE9 /* PBXTargetDependency */,
+			);
+			name = HueblyTests;
+			productName = HueblyTests;
+			productReference = 087D89BB1A46493A00EC2DE9 /* HueblyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		087D89971A46493900EC2DE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = tjmaynes;
+				TargetAttributes = {
+					087D899E1A46493900EC2DE9 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = H796ET835T;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+					087D89BA1A46493A00EC2DE9 = {
+						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = 087D899E1A46493900EC2DE9;
+					};
+				};
+			};
+			buildConfigurationList = 087D899A1A46493900EC2DE9 /* Build configuration list for PBXProject "Huebly" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 087D89961A46493900EC2DE9;
+			productRefGroup = 087D89A01A46493900EC2DE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				087D899E1A46493900EC2DE9 /* Huebly */,
+				087D89BA1A46493A00EC2DE9 /* HueblyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		087D899D1A46493900EC2DE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A856831CB7A7610042D51D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		087D89B91A46493A00EC2DE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		087D899B1A46493900EC2DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A856891CB7A7F10042D51D /* Color.m in Sources */,
+				08EBF1F91CFA0D2F0080B527 /* TMAddColorViewController.m in Sources */,
+				0893F4901CC28AD600FB8E02 /* TMDataManager.m in Sources */,
+				0893F48D1CC289A900FB8E02 /* TMPersistenceStack.m in Sources */,
+				0848DBC61D97345200B09187 /* TMDataOperation.m in Sources */,
+				08373BD81D970A0F0026B8AD /* TMDetailView.swift in Sources */,
+				08373BCF1D96F4F00026B8AD /* TMAddColorView.m in Sources */,
+				08373BD31D96F88D0026B8AD /* TMAddColorViewModel.m in Sources */,
+				08A8568C1CB7A8190042D51D /* Huebly.xcdatamodeld in Sources */,
+				0893F4941CC28BA300FB8E02 /* TMDependencyInjection.m in Sources */,
+				08EBF21E1CFA223C0080B527 /* AppDelegate.m in Sources */,
+				08A856851CB7A7610042D51D /* main.m in Sources */,
+				0848DBC81D97439D00B09187 /* TMDeleteOperation.swift in Sources */,
+				08373BD61D9709510026B8AD /* TMDetailViewController.swift in Sources */,
+				0893F4971CC28F5600FB8E02 /* TMRootViewController.m in Sources */,
+				085C43F31D935CA30029C2D7 /* TMStoreOperation.m in Sources */,
+				08373BDD1D970CD10026B8AD /* TMQueryOperation.swift in Sources */,
+				0848DBC21D972EFD00B09187 /* NSOperationQueue+DataOperationQueue.m in Sources */,
+				0847EE121CFA35C20068BD4F /* TMRootView.m in Sources */,
+				08DBD3131D93534400BF046C /* TMOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		087D89B71A46493A00EC2DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DFB32E1D99F81000AA9F9B /* ColorModelTestCase.swift in Sources */,
+				08DFB3301D99FC0F00AA9F9B /* DataManagerTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		087D89BD1A46493A00EC2DE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 087D899E1A46493900EC2DE9 /* Huebly */;
+			targetProxy = 087D89BC1A46493A00EC2DE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		087D89C31A46493A00EC2DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Huebly/Assembly/Huebly-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Huebly-Swift.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		087D89C41A46493A00EC2DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Huebly/Assembly/Huebly-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Huebly-Swift.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		087D89C61A46493A00EC2DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Huebly/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tjmaynes.Huebly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Huebly-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		087D89C71A46493A00EC2DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Huebly/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tjmaynes.Huebly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Huebly-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		087D89C91A46493A00EC2DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HueblyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjmaynes.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Huebly-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huebly.app/Huebly";
+				USER_HEADER_SEARCH_PATHS = ./;
+			};
+			name = Debug;
+		};
+		087D89CA1A46493A00EC2DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HueblyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tjmaynes.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Huebly-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Huebly.app/Huebly";
+				USER_HEADER_SEARCH_PATHS = ./;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		087D899A1A46493900EC2DE9 /* Build configuration list for PBXProject "Huebly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				087D89C31A46493A00EC2DE9 /* Debug */,
+				087D89C41A46493A00EC2DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		087D89C51A46493A00EC2DE9 /* Build configuration list for PBXNativeTarget "Huebly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				087D89C61A46493A00EC2DE9 /* Debug */,
+				087D89C71A46493A00EC2DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		087D89C81A46493A00EC2DE9 /* Build configuration list for PBXNativeTarget "HueblyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				087D89C91A46493A00EC2DE9 /* Debug */,
+				087D89CA1A46493A00EC2DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		08A8568A1CB7A8190042D51D /* Huebly.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				08A8568B1CB7A8190042D51D /* Huebly.xcdatamodel */,
+			);
+			currentVersion = 08A8568B1CB7A8190042D51D /* Huebly.xcdatamodel */;
+			path = Huebly.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 087D89971A46493900EC2DE9 /* Project object */;
+}

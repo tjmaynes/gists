@@ -1,0 +1,7 @@
+include:
+  - ToDo
+  - ToDoTests
+except:
+  - lower-camel-case
+  - todo-syntax
+  - forced-type-cast

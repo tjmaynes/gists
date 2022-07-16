@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  build:
+    macos:
+      xcode: 11.0.0
+    steps:
+      - checkout
+      - run:
+        name: Install Dependencies
+        command: make install_dependencies
+      - run:
+        name: Run Tests
+        command: make test
+      - store_test_results:
+          path: test_output
+      - store_artifacts:
+          path: test_output
+          destination: scan-output
