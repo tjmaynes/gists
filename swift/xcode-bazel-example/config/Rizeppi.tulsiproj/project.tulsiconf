@@ -1,0 +1,14 @@
+{
+  "configDefaults" : {
+    "optionSet" : {
+
+    }
+  },
+  "packages" : [
+    "src/ios",
+    "src/macos",
+    "src/shared"
+  ],
+  "projectName" : "Rizeppi",
+  "workspaceRoot" : "../.."
+}

@@ -1,0 +1,10 @@
+{
+  "optionSet" : {
+    "BazelPath" : {
+      "p" : "/opt/homebrew/Cellar/bazel/4.1.0/bin/bazel"
+    },
+    "WorkspaceRootPath" : {
+      "p" : "/Users/tjmaynes/workspace/tjmaynes/rizeppi-ios"
+    }
+  }
+}

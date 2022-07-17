@@ -1,0 +1,15 @@
+# Macos
+.DS_Store
+
+# Generated
+bin/
+
+# Bazel
+bazel-*
+
+# Tulsi
+*.xcodeproj
+*.xcworkspace
+
+# Editors
+.idea/

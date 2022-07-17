@@ -1,0 +1,34 @@
+build \
+  --apple_platform_type=ios \
+  --xcode_version=12.5.1 \
+  --ios_minimum_os=14.0 \
+  --ios_simulator_device="iPhone 11" \
+  --ios_simulator_version=14.5 \
+  --verbose_failures \
+  
+test --verbose_failures
+
+# During development
+# build -s --test_output=all --cache_test_results=no
+
+build:debug \
+  --compilation_mode=dbg \
+  --define=apple.compress_ipa=no \
+  --define=apple.package_swift_support=no \
+  --define=apple.add_debugger_entitlement=yes \
+  --define=apple.propagate_embedded_extra_outputs=yes \
+  --ios_signing_cert_name="iPhone Developer" \
+
+build:release \
+  --compilation_mode=opt \
+  --define=apple.compress_ipa=yes \
+  --define=apple.package_swift_support=yes \
+  --define=apple.add_debugger_entitlement=no \
+  --experimental_multi_threaded_digest \
+  --experimental_strict_action_env \
+  --features=swift.no_generated_header \
+  --features=swift.use_global_module_cache \
+  --host_swiftcopt=-warnings-as-errors \
+  --host_swiftcopt=-whole-module-optimization \
+  --ios_signing_cert_name="iPhone Developer" \
+  --ios_multi_cpus=arm64 \
