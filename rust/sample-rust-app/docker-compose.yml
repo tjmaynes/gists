@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  oauth-db:
+    image: "postgres:11.5-alpine"
+    restart: always
+    volumes:
+      - oauth-volume:/var/lib/postgresql/data/
+    networks:
+      - oauth-network 
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env.development
+
+volumes:
+  oauth-volume:
+
+networks:
+  oauth-network:

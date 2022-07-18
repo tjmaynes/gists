@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ship_it:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          profile: minimal
+      - name: Cache rust dependencies
+        uses: Swatinem/rust-cache@v1
+      - name: 🔨 Install Dependencies 🔨
+        run: sudo apt-get update && sudo apt-get install make && make install
+      - name: 🔨 Setup PostgreSQL database 🔨 
+        uses: m4nu56/postgresql-action@1.0
+        with:
+          postgresql version: '11.5-alpine'
+          postgresql init scripts: 'db'
+          postgresql db: 'oauth'
+          postgresql user: 'root'
+          postgresql password: 'postgres'
+      - name: 🧪 Test 🧪
+        run: make test
+      - name: ⏰ Bump version and push tag ⏰
+        uses: anothrNick/github-tag-action@master
+        id: tag-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: tjmaynes
+          WITH_V: true
+      - name: 🚀 Deploy 🚀
+        run: make deploy
+        env:
+          REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
+          TAG: ${{ steps.tag-action.outputs.tag }}
