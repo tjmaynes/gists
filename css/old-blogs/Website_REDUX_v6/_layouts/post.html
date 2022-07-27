@@ -1,0 +1,25 @@
+---
+---
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="wrapper">
+      {% include header.html %}
+      <section>
+      <article class="post">
+      <div class="header-info">
+        <a href="{{ page.url }}">{{ page.title }}</a>
+        {% include header-post.html %}
+      </div>
+      <span class="author">Written by <a href="mailto:tjmaynes@outlook.com">{{ site.author }}</a></span>
+      {{ content }}
+      <article id="date">[{{ page.date | date: "%d %B %Y" }}]</article>
+      {% include disqus.html %}
+      </section>
+      {% include footer.html %}
+    </div>
+  </div>
+  {% include google.js %}
+</body>
+</html>

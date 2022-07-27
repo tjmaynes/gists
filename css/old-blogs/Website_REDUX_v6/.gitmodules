@@ -1,0 +1,6 @@
+[submodule "slides/osl"]
+	path = slides/osl
+	url = https://www.github.com/tjmaynes/osl.git
+[submodule "slides/learn_git"]
+	path = slides/learn_git
+	url = https://www.github.com/tjmaynes/learn_git.git

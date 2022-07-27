@@ -1,0 +1,78 @@
+% File: example.tex
+% Author: TJ Maynes
+% This is a comment!!
+\documentclass[12pt]{article}
+\RequirePackage{color,graphicx}
+\usepackage{newcent}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{xltxtra,url,parskip}
+\usepackage{xunicode}
+\usepackage{float}
+\usepackage[ruled,lined,linesnumbered,nofillcomment]{algorithm2e}
+\usepackage[absolute]{textpos}
+\usepackage[left=0.7in, right=0.7in, top=0.7in, bottom=0.7in]{geometry}
+\usepackage[xetex,
+  unicode,
+  pdfencoding=auto,
+  pdfinfo={
+    Title={tjmaynes/Project1},
+    Author={TJ Maynes},
+    Subject={TJ Maynes Project1},
+    Keywords={insertion sort, quick sort, merge sort, algorithms, undergraduate},
+    Producer={xelatex},
+    Creator{xelatex}}]{hyperref}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\restylefloat{table}
+
+\begin{document}
+
+\title{Asymptotic Notation and Sorting Project}
+\author{TJ Maynes}
+\date{October 15, 2014}
+
+\maketitle
+
+\textbf{1 Theory}
+
+\vspace{0.2in}
+\textbf{1.1 Insertion Sort}
+
+Insertion sort is a sorting method that starts at a single element in an array and then increments the rest of the elements in an array. Pseudocode for implementing an insertion sort is provided in Algorithm 1.
+
+\begin{algorithm}
+  \For{$i=1$ to $n$}{
+
+    $j=i$
+
+    \While{$j > 0$ and {$A[j] < A[j-1]$}}{
+      $\mathtt{Swap}(A[j], A[j-1])$
+
+      $j-=1$
+    }
+  }
+  \caption{\texttt{Insertionsort}($A,low,high$)}
+\end{algorithm}
+
+Below is a table of CPU times (in milliseconds) from running an increasing array of various instance sizes on mergesort. \\
+
+\begin{table}[H]
+  \begin{tabular}{lllllllllll}
+    & \multicolumn{10}{c}{Mergesort}                                                               \\
+    & \multicolumn{10}{c}{Instance Size}                                                           \\
+    & 10000  & 20000  & 30000  & 40000  & 50000  & 60000   & 70000   & 80000   & 90000   & 100000  \\
+    1   & 20.736 & 36.352 & 55.552 & 81.408 & 98.816 & 118.528 & 141.568 & 159.488 & 192.256 & 206.592 \\
+    2   & 17.920 & 36.608 & 63.488 & 74.496 & 93.952 & 113.664 & 142.592 & 171.264 & 185.856 & 198.912 \\
+    3   & 17.408 & 36.352 & 56.320 & 81.152 & 94.464 & 114.432 & 137.728 & 169.984 & 191.488 & 208.384 \\
+    4   & 17.664 & 39.680 & 59.904 & 78.592 & 94.464 & 118.016 & 142.080 & 161.536 & 178.432 & 207.360 \\
+    5   & 17.408 & 36.352 & 55.552 & 75.264 & 98.048 & 115.200 & 149.760 & 165.632 & 179.456 & 212.224 \\
+    Avg & 18.227 & 37.069 & 58.163 & 78.182 & 95.949 & 115.968 & 142.746 & 165.581 & 185.498 & 206.694
+  \end{tabular}
+  \end{table}
+
+% this is another comment!
+
+\end{document}

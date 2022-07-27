@@ -1,0 +1,26 @@
+---
+---
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  {% include head.html %}
+<body>
+	<div id="container" role="main">
+		{% include banner.html %}
+		{% include menu.html %}
+		{% for post in paginator.posts %}
+			<article class="posts">
+				<header>{{ post.date | date: "%Y %b" }}<span style="font-size:1.1em;"> | </span><a href="{{ post.url }}">{{ post.title }}</a></header>
+				{% if post.video_url %}
+				  <iframe 
+					src="{{ post.video_url }}?&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent" 
+					frameborder="0" class="youtube"
+					allowfullscreen="true">
+				</iframe>
+				{% endif %}
+				{{ post.content | truncatewords: 250 }}
+			</article>
+		{% endfor %}
+		{% include nav-pagination.html %}
+	</div>
+</body>
+</html>

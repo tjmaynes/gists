@@ -1,0 +1,8 @@
+/* Fonts */
+/*Blog--Paragraph Font*/
+@font-face {
+    font-family: 'Gudea';
+    src: url('../font/Gudea.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

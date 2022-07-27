@@ -1,0 +1,23 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) /*iPhone browser  --every page*/
+{
+	header
+	{
+		font-size:3.2em;
+	}
+	.author
+	{
+		font-size:1.3em;
+	}
+	#banner
+	{
+		height: 60px;
+	}
+	#footer a
+	{
+		font-size: 2.6em;
+	}
+	.wall-post span
+	{
+		font-size: 0.8em;
+	}
+}

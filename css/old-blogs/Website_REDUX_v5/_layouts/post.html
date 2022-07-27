@@ -1,0 +1,24 @@
+---
+---
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  {% include head.html %}
+  <body>
+    {% include banner.html %}
+    <div id="container" role="main">
+      <div class="content">
+	<article class="post">
+	  <header>
+	    <a href="{{ post.url }}">{{ page.title }}</a>
+	    {% include header-post.html %}
+	  </header>
+	  <span class="author">Written by <a href="mailto:tjmaynes@outlook.com">{{ site.author }}</a></span>
+	  {{ content }}
+	  <article id="date">[{{ page.date | date: "%d %B %Y" }}]</article>
+	</article>
+	{% include disqus.html %}
+	{% include footer.html %}
+      </div>
+    </div>
+  </body>
+</html>

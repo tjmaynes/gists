@@ -1,0 +1,26 @@
+---
+---
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  {% include head.html %}
+  <body>
+    {% include banner.html %}
+    <div id="container" role="main">
+      <div class="content">
+	{% for post in paginator.posts %}
+	<article class="post">
+	  <header>
+	    <a href="{{ post.url }}">{{ post.title }}</a>
+	    {% include header-post-info.html %}
+	  </header>
+	  <span class="author">Written by <a href="mailto:tjmaynes@outlook.com">{{ site.author }}</a></span>
+	  {{ post.content }}
+	  <article id="date">[{{ post.date | date: "%d %B %Y" }}]</article>
+	</article>
+	{% endfor %}
+	{% include nav-pagination.html %}
+	{% include footer.html %}
+      </div>
+    </div>
+  </body>
+</html>

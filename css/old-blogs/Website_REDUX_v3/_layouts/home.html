@@ -1,0 +1,22 @@
+---
+---
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+{% include head.html %}
+<body>
+  <div id="container" role="main">
+    {% include sidebar.html %}
+    <article class="content">
+			{% include banner.html %}
+			{% for post in paginator.posts limit:4 %}
+			<article class="post">
+			  <header>{{ post.date | date: "%Y %b %d" }}<span style="font-size:1.1em;"> | </span><a href="{{ post.url }}">{{ post.title }}</a></header>
+			  {{ post.content }}
+			</article>
+			{% endfor %}
+			<hr>
+			{% include nav-pagination.html %}
+  	</article>
+  </div>
+</body>
+</html>

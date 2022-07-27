@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+{% include head.html %}
+<body>
+  <div id="container" role="main">
+    {% include banner.html %}
+    <article class="content">
+			<div class="post">
+			  <header>{{ page.date | date: "%Y %b %d" }}<span style="font-size:1.1em;"> | </span><span style="color:#36648B;">{{ page.title }}</span>
+<!-- 			  	<span style="vertical-align:top; font-size:14px; width: 1em; float:right;">
+				    <a href="http://twitter.com/intent/tweet?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;text={{ page.title | cgi_escape }}&amp;via=tjmaynes&amp;related=tjmaynes" 
+				       target="_blank" 
+				       title="Tweet"
+				       rel="nofollow">
+				       T
+				    </a>
+				    <a href="http://www.facebook.com/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;t={{ page.title | cgi_escape }}" 
+				       target="_blank" 
+				       rel="nofollow" 
+				       title="Share on Facebook">
+				       F
+				    </a>
+				</span> -->
+			  </header>
+			  {{ content }}
+			</div>
+			{% include nav-pagination.html %}
+			{% include disqus.html %}
+	   </article>
+	   {% include footer.html %}
+	  </div>
+	</body>
+</html>

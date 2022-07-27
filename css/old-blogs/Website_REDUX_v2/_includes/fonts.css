@@ -1,0 +1,22 @@
+/* Fonts */
+/*Regular Font*/
+@font-face {
+    font-family: 'Ubuntu-R';
+    src: url('../font/Ubuntu-R.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Bio Font*/
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../font/Courier Prime.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Banner*/
+@font-face {
+    font-family: 'GeosansLight';
+    src: url('../font/GeosansLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

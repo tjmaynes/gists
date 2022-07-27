@@ -1,0 +1,10 @@
+[submodule "projects/canny-bot"]
+	path = projects/canny-bot
+	url = https://github.com/tjmaynes/cannybot.git
+	branch = gh-pages
+[submodule "projects/osl"]
+	path = projects/osl
+	url = https://github.com/tjmaynes/osl.git
+[submodule "projects/stockjs"]
+	path = projects/stockjs
+	url = https://github.com/tjmaynes/stockjs.git

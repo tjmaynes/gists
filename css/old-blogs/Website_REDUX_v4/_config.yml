@@ -1,0 +1,6 @@
+permalink: /archive/:title/
+url: http://www.tjmaynes.com
+author: TJ Maynes
+server_port: 4000
+github_user: tjmaynes
+paginate: 3

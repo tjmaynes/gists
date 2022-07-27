@@ -1,0 +1,17 @@
+---
+---
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        {% include header.html %}
+        {{ content }}
+        {% include about.html %}
+        {% include footer.html %}
+      </div>
+    </div>
+    {% include google.js %}
+  </body>
+</html>

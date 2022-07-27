@@ -1,0 +1,36 @@
+---
+---
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  {% include head.html %}
+<body>
+	<div id="container" role="main">
+		{% include banner.html %}
+		{% include menu.html %}
+		<div class="posts">
+			<div class="wrap">
+				<header>{{ page.date | date: "%Y %b" }}<span style="font-size:1.1em;"> | </span><span style="color:#990000">{{ page.title }}</span>
+				<a href="http://twitter.com/intent/tweet?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;text={{ page.title | cgi_escape }}&amp;via=tjmaynes&amp;related=tjmaynes" target="_blank" title="Tweet" rel="nofollow">
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3QzhEQzQ5MEUwMjI2ODExODcxRkFGRTJCNjkzN0QzRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOUQyMjA5NzUzMDYxMUUxODBBRUU4ODBBQjU4MUI2NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOUQyMjA5NjUzMDYxMUUxODBBRUU4ODBBQjU4MUI2NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjhEQzg5N0M2OEYyMjY4MTE5MTA5QzBBMDY4OTMxQzFBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdDOERDNDkwRTAyMjY4MTE4NzFGQUZFMkI2OTM3RDNGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+QAIWrgAAA8lJREFUeNrsV11IU2EY9sy56dTIsNIYWcHYUJMo8yYS9MLtQghCJbzROy/KK0GQ7iQQjIguUiTGFG/CC28SLzIaA1HRQFQ082emzemm7kfn/t3pee0slp2dnelFF/nBw47nnO99n+/9ed4jw7Jsyr9czDmBcwLnBIgAwzC8D5Mlt7GxkZOdna2USqUFoVDIPDs7u1RRURGO9/6xfSEn9EwM6CDLy8uF4XDYHIlEPIDP4XB04H6aEGFBAlarVXF4eJgfjZKQ85mZmeKjoyMnyy2v12tdWFh4YTAY8k5LQIJwasmY3+//tLe3V0P34hCQweEky7OIlM1me0x7kyWQqtPpbsDwBsLJckSMIFUcGxEyPD8/X0fvCCC4tramo31JRQC43NraWn9wcGDHSX4b29/ff2k0GrO4fXLk+iM9F0IgEPje3Nx8IdkizLTb7UNut3sbxcVGQQbxa9nZ2XnS09OjwfVR7PN4MJvNTymyyRDIWlpaMtBmtNRfoIjgZFa+Z3zAQSanp6fvrK+v3/L5fI0DAwMZiQgoSkpK7q6srIzBUUiso3iggxBp1NIXk8n0gIqXfEsEuiQIIbH09va+3d3dpWJMOQuQuhQQSdne3rap1eqGqqqqtIRKSFGAHhhyc3PrzirZiIDf5XJZkYq5qampdw0NDZ9h05dIbtNVKpVmaGjozerq6gw2uxFC9jRA57yHvYdAIXAlmoJEEZACF7gNuSjKV0qlsizZ0weDQU9tbe2jkZGRr/jTAwSAEOmLNIFUhkHOTRuwuaygoKCMcpnsGh0d1WP/N1zuUDb4Jh4D1VOeVKsYxaP+zevr63uOLPgwI1ix2NzcNOfk5NwmXeETomgXMIuLixmo0uGtra37PLLJ9vf3X62urq7BqE0XOyVReMGurq52p9Npgw2/0PcAEcmamJioLy0tfY22mUPexkBoNTU1NRNO78lkMi3uZYtNAexGBgcHOxobG/U0XLm8x5ViOrECuN7Z2VkPfd+iyoVDUjsWysViJrCYA6KAEwe6u7vbYU9DB+MbRHxSLOFevlleXq5Frw6jb0NinUbxA6utre0Z7Ki5DpIIfQ+cbEO6kAOXqOgqKytVmGJajUZTlp+fr5ZIJNJ4ImOxWGbHx8dNLS0tHzwezyZu2wEvEEmGQGz/K7gTXOR+FU1NTSo5VlFR0TWkxIfvAycq3afX61e4/nYBDmCf2p98JPoiEhIihms/GRcVOXctjRmrVJEhzpmfK7QgFeCxgfgCJ4rAHzLN/HpJwjmPbohEwfJoumgC//U/Jj8FGABmFtOMms+HogAAAABJRU5ErkJggg==" />
+				</a>
+				<a href="http://www.facebook.com/sharer.php?u={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&amp;t={{ page.title | cgi_escape }}" target="_blank" rel="nofollow" title="Share on Facebook">
+				<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3QzhEQzQ5MEUwMjI2ODExODcxRkFGRTJCNjkzN0QzRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOUQ3NTg3NDUzMDYxMUUxODBBRUU4ODBBQjU4MUI2NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOUQ3NTg3MzUzMDYxMUUxODBBRUU4ODBBQjU4MUI2NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjhEQzg5N0M2OEYyMjY4MTE5MTA5QzBBMDY4OTMxQzFBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdDOERDNDkwRTAyMjY4MTE4NzFGQUZFMkI2OTM3RDNGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+p2k58AAAAh5JREFUeNrsV0tLAlEUbh6O46gLLUhoU6sgKCIIgtbtIugX+BP6C/0H/0D7FoEuClopES4FEalFD0fER6H4GHSenQPXmCalO8OYBV44OHzncs4393z3zJGxLGtpnotdmvNaEOBpNzIMMxHudDpHgiAcg5aiY5DjuIEoimeAGT8GRhHSmDNxuVxeV1W1aE1YhmF0YU+EKq5HAoKiKHfWlKVpWh/2rNDE9aIBJpfL7YdCocNpG0zTHNHqi/dAgItEItvOUwEtVDOZzGWpVHqRJKkFkDYzAjzPrzoJ5PP5q2QyeQGPePwDMGVWBFioMecEY7EYJpZJclS/SVVP2lYM15CFYz5lWfYEVL4TjUZ37f5er1cAXxFOB5NXw+Hwud/XMNhoNFKQ3NJ1HZX+xRBDH1q73b6F/ZLft4DvdrsiJECVfwuEGPrQarXaK2153WiAhbfkaErWbDafaTXghoApy3JhNBrdgOA2EonEpt1Zr9cfWq2WHAgEtGw2ew+QThXVjQbA1sD20ul0ajgcWnZDDHwHYFvYBfHlaOK6OQFsLG9gajwe7ztLgRj8PJFrqJKr6G8JwLDFDoLBoOYkgBhpQoqbpuKlEX2W7lfngUm68YPQ/5mI/lQJ/CSwmIq9lMCqVCqP8Hm+hq9gAAFsv4ihz/V852IeGD9i0mXSbkWCDUmXfLePYjSxvRBgCAnBVkKTtF/Nfgq+Elj8N5zV+hBgAIDHO69dZLDxAAAAAElFTkSuQmCC" />
+				</a>
+				</header>
+				{% if video_url %}
+				  <iframe 
+					src="{{ video_url }}?&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent" 
+					frameborder="0" class="youtube"
+					allowfullscreen="true">
+				</iframe>
+				{% endif %}
+				{{ content }}
+			</div>
+			{% include related_posts.html %}
+			<hr>
+			{% include disqus.html %}
+		</div>
+		{% include footer.html %}
+	</div>
+</body>
+</html>

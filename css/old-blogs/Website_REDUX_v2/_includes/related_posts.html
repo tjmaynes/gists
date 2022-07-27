@@ -1,0 +1,14 @@
+<div style="padding-top:20px;">
+Related Posts:
+{% for post in site.related_posts %}
+  {% assign match = false %}
+  {% for category in post.categories %}
+	{% if page.categories contains category %}
+	  {% assign match = true %}
+	{% endif %}
+  {% endfor %}
+  {% if match %}
+	<a href="{{ post.url }}" style="padding-left: 8px;">{{ post.title }}</a>
+  {% endif %}                       
+{% endfor %}
+</div>

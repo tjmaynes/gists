@@ -1,0 +1,7 @@
+permalink: /blog/:categories/:title/
+url: http://www.tjmaynes.com
+title: TJ Maynes
+server_port: 4000
+github_user: tjmaynes
+auto: yes
+paginate: 3

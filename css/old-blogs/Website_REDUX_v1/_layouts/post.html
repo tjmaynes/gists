@@ -1,0 +1,18 @@
+---
+---
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+<body>
+	<div id="container" role="main">
+		{% include banner.html %}
+		<header><span style="margin:0pt auto;">{{ page.title }}</span></header>
+		<h2 class="author">Written by {{ page.author }}</h2>
+		<div style="padding-top:20px;padding-bottom:20px;">
+			{{ content }}
+		</div>
+		<hr>
+		{% include disqus.html %}
+	</div>
+</body>
+</html>

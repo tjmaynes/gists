@@ -1,0 +1,177 @@
+*{
+  padding:0px;
+  margin:0px;
+}
+em{
+  font-style: italic;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+  width:100%;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+img{
+  max-width:100%;
+  height:auto;
+  margin-top:10px;
+}
+a:active,a:focus{
+  outline: none;
+}
+a:hover, a{
+  text-decoration:none;
+  color:#36648B;
+  outline: none;
+}
+a:hover{
+  opacity:0.8;
+}
+html, body{
+  color:#777;
+}
+body{
+  line-height:1;
+  font-family:'GudeaRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+hr{
+  border-width:1px 0px;
+  line-height:15px;
+  border-style: solid none;
+  border-color:#ddd;
+}
+p{
+  padding: 10px 20px;
+  margin:0 auto;
+  font-size:1.0em;
+  line-height:1.6;
+}
+h1{
+  font-size:22px;
+  padding-top:10px;
+}
+h2{
+  text-align:left;
+}
+h3{
+  text-align:center;
+  font-size:16px;
+  padding-top:5px;
+}
+header{
+  font-size:2.0em;
+  color:#999;
+  letter-spacing: 3px;
+  padding:10px 0px 10px 15px;
+  text-align:left;
+}
+
+/*Content*/
+#container{
+  text-align:justify;
+  padding:5px 10px;
+  max-width:980px;
+  margin: 0 auto;
+}
+#menu, #date{
+  letter-spacing: 3px;
+  text-align:center;
+}
+#menu{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#date{
+  padding-top:15px;
+  font-size:11pt;
+}
+#menu ul li a{
+  font-size: 0.9em;
+}
+#banner ul li, .archive ul li {
+  display: block;
+}
+nav ul li {
+  display: inline;
+}
+.archive{
+	padding-bottom:10px;
+}
+.content{
+  margin:0 0 0 33%;
+  padding-top:10px;
+  padding-bottom:5px;
+  padding-left:2em;
+}
+.sidebar{
+  float:left;
+  width:33%;
+  text-align: left;
+}
+.post{
+  padding-top:10px;
+}
+.wall-post-odd, .wall-post-even, .wall-post a{
+  padding:5px;
+}
+#pagination{
+  padding-bottom: 10px;
+  text-align:center;
+  font-size:18px;
+  padding-top:10px;
+}
+#disqus_thread{
+  padding-top: 10px;
+  color:#4F4F4F;
+}
+
+/*Extras*/
+.post>p:first-child, .bio>p:first-child{
+  text-indent: 40px;
+}
+.post>p:last-child:after {
+  content: " -TJ";
+}
+.wall-post-even, header{ 
+  background-color: #F2EDE2;
+  border: 1px dashed #ccc;
+}
+img:last-child:after{
+ padding-bottom: 10px;
+}
+footer{
+  font-size: 11pt;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,29 @@
+---
+---
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="wrapper">
+      {% include header.html %}
+      <hr>
+      <article>
+	<section class="post">
+	  <div class="post-header">
+	    <div class="post-header-info">
+              <a href="{{ page.url }}">{{ page.title }}</a>
+              {% include header-post.html %}
+	    </div>
+	    <span class="author">Written by <a href="mailto:tjmaynes@gmail.com">{{ site.author }}</a></span>
+	  </div>
+	  <div class="post-content">
+	    {{ content }}
+	    <article id="date">[{{ page.date | date: "%d %B %Y" }}]</article>
+	  </div>
+	</section>
+      </article>
+      <hr>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
