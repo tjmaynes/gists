@@ -1,0 +1,33 @@
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="error">
+  Error :(
+</div>
+<div *ngIf="products">
+  <h1>Products</h1>
+  <div class="products">
+    <div class="product" *ngFor="let product of products">
+      <h2 style="text-align: center;">{{ product.name }}</h2>
+  
+      <div class="product-metadata">
+        <div>
+          <h3>Description</h3>
+          <p>{{ product.description }}</p>
+        </div>
+  
+        <div>
+          <h3>Price</h3>
+          <p>{{ product.price }}</p>
+        </div>
+      </div>
+  
+      <div class="reviews">
+        <h3>Reviews</h3>
+        <div class="review" *ngFor="let review of product.reviews">
+          <p>"{{ review.content }}" - {{ review.reviewer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
