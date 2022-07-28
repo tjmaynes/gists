@@ -1,0 +1,7 @@
+Now running isRandomPivot is false.
+
+Increasing Array using quicksort
+10000 instances.
+428.116 ms
+432.769 ms
+436.474 ms
