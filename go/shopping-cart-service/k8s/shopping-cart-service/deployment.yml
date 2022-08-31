@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopping-cart-service
+spec:
+  selector:
+    matchLabels:
+      app: shopping-cart-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: shopping-cart-service
+    spec:
+      containers:
+        - name: shopping-cart-service 
+          image: tjmaynes/shopping-cart-service:1.5.0
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: shopping-cart-secrets
+                  key: db-uri
