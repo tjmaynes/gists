@@ -1,0 +1,22 @@
+{
+  "name": "software-interviewing-with-javascript",
+  "version": "1.0.0",
+  "description": "My interviewing preparation (data structures, algorithms, etc) work in Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": "git+https://github.com/tjmaynes/sofware-interviewing-with-javascript.git",
+  "author": "TJ Maynes <tj@tjmaynes.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjmaynes/sofware-interviewing-with-javascript/issues"
+  },
+  "homepage": "https://github.com/tjmaynes/sofware-interviewing-with-javascript#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.4.0",
+    "jest": "^27.3.1"
+  }
+}
