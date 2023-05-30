@@ -1,8 +1,0 @@
-**/bin
-**/obj
-README.md
-Dockerfile
-.vscode/
-.git/
-.gitignore
-.DS_Store
