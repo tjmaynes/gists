@@ -1,0 +1,10 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "collectCoverageFrom": [
+    "server/**/*.ts"
+  ],
+  "modulePathIgnorePatterns": [
+    "<rootDir>/dist/"
+  ]
+}
