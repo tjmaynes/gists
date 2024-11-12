@@ -1,13 +1,14 @@
 const MINIMUM_NUMBER_OF_PICKS = 1;
 
-const getCurrentAllocation = (input) => input
-    .map((current) => current[0] * current[1])
-    .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+const sumOf = (input = []) => input.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+
+const getCurrentAllocation = (input = []) => sumOf(
+    input.map((current) => current[0] * current[1])
+);
 
 const prettyPrint = (input, remainder) => {
-  let results = input.map(row => row[1]);
-  results.push(remainder);
-  return results;
+  const results = input.map(row => row[1]);
+  return [...results, remainder];
 }
 
 const handleFractionalPicks = (input, remainder) => {
@@ -35,6 +36,8 @@ const handleWholePicks = (input, remainder) => {
     let quantity = Math.floor(Math.trunc(allocation / price));    
     results[i] = [price, quantity];
   }
+
+  console.log(results)
 
   remainder -= getCurrentAllocation(results);
 
@@ -81,30 +84,38 @@ const handleWholePicks = (input, remainder) => {
   return prettyPrint(results, remainder)
 }
 
-function OPTIMIZE_PICKS(input, remainder, can_choose_fractional_picks) {
-  if (can_choose_fractional_picks) return handleFractionalPicks(input, remainder)
-  else return handleWholePicks(input, remainder);
-} 
+function OPTIMIZE_PICKS(input, remainder, canChooseFractionalPicks) {
+  const results = canChooseFractionalPicks ?
+    handleFractionalPicks(input, remainder) :
+    handleWholePicks(input, remainder);
+  
+  return ['Optimize Picks', ...results]
+}
 
-console.log(OPTIMIZE_PICKS([
-  [411.18, .28],
-  [231.57, .14],
-  [248.47, .07],
-  [274.61, .07],
-  [227.01, .07],
-  [112.19, .07],
-  [62.55, .06],
-  [64.98, .06],
-  [51.73, .03],
-  [38.47, .03],
-  [137.49, .03],
-  [75.8, .03],
-  [75.19, .03],
-  [59.99, .03]
-], 50000, false));
+function AVERAGE_BY_PERCENTAGE(input) {
+  return sumOf(input.map(([value, percentage]) => value * percentage))
+}
 
-// Crypto
-console.log(OPTIMIZE_PICKS([
-  [50000.00, .7],
-  [2000.00, .3]
-], 1000, true));
+// console.log(OPTIMIZE_PICKS([
+//   [411.18, .28],
+//   [231.57, .14],
+//   [248.47, .07],
+//   [274.61, .07],
+//   [227.01, .07],
+//   [112.19, .07],
+//   [62.55, .06],
+//   [64.98, .06],
+//   [51.73, .03],
+//   [38.47, .03],
+//   [137.49, .03],
+//   [75.8, .03],
+//   [75.19, .03],
+//   [59.99, .03]
+// ], 50000, false));
+
+// console.log(OPTIMIZE_PICKS([
+//   [50000.00, .7],
+//   [2000.00, .3]
+// ], 1000, true));
+
+// console.log(AVERAGE_BY_PERCENTAGE([[0.45, 1]]));
